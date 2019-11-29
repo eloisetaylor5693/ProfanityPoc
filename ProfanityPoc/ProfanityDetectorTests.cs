@@ -14,7 +14,7 @@ namespace ProfanityPoc
             Assert.That(result, Is.False);
         }
 
-        [TestCase("shitface wonderer")]
+        [TestCase("shitface")]
         [TestCase("SHITFACE")]
         public void GivenProfanities_IsProfanity_IsTrue(string profanity)
         {
@@ -28,7 +28,7 @@ namespace ProfanityPoc
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity("sh1tface");
-            Assert.That(result, Is.True);
+            Assert.That(result, Is.False);
         }
     }
 }
