@@ -10,7 +10,7 @@ namespace ProfanityPoc
         public void GivenWordsWhichAreNotProfane_IsProfanity_IsFalse(string wordWhichIsNotProfane)
         {
             var filter = new ProfanityFilter.ProfanityFilter();
-            var result = filter.IsProfanity("wordWhichIsNotProfane");
+            var result = filter.IsProfanity(wordWhichIsNotProfane);
             Assert.That(result, Is.False);
         }
 
