@@ -2,7 +2,8 @@ using NUnit.Framework;
 
 namespace ProfanityPoc.ProfanityDetectorLib
 {
-    public class IsProfanityTests
+    [TestFixture]
+    public sealed class IsProfanityTests
     {
         [TestCase("hello")]
         [TestCase("Scunthorpe")]
@@ -11,6 +12,7 @@ namespace ProfanityPoc.ProfanityDetectorLib
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity(wordWhichIsNotProfane);
+
             Assert.That(result, Is.False);
         }
 
@@ -20,6 +22,7 @@ namespace ProfanityPoc.ProfanityDetectorLib
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity(profanity);
+
             Assert.That(result, Is.True);
         }
 
@@ -28,6 +31,7 @@ namespace ProfanityPoc.ProfanityDetectorLib
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity("sh1tface");
+
             Assert.That(result, Is.False);
         }
 
@@ -36,6 +40,7 @@ namespace ProfanityPoc.ProfanityDetectorLib
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity("shits");
+
             Assert.That(result, Is.True);
         }
     }
