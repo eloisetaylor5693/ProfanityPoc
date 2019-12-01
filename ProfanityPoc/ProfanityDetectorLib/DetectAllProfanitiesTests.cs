@@ -8,8 +8,8 @@ namespace ProfanityPoc.ProfanityDetectorLib
         [Test]
         public void GivenSentenceWithProfanity_DetectAllProfanities_FlagsProfanities()
         {
-            var filter = new ProfanityFilter.ProfanityFilter();
-            var result = filter.DetectAllProfanities("0 shits given");
+            var sut = new ProfanityFilter.ProfanityFilter();
+            var result = sut.DetectAllProfanities("0 shits given");
 
             Assert.That(result, Contains.Item("shits"));
         }
