@@ -22,13 +22,21 @@ namespace ProfanityPoc
             var result = filter.IsProfanity(profanity);
             Assert.That(result, Is.True);
         }
-        
+
         [Test]
         public void GivenProfanityThatLibraryDoesNotRecognise_IsProfanity_IsFalse()
         {
             var filter = new ProfanityFilter.ProfanityFilter();
             var result = filter.IsProfanity("sh1tface");
             Assert.That(result, Is.False);
+        }
+
+        [Test]
+        public void GivenPluralProfanity_IsProfanity_IsFalse()
+        {
+            var filter = new ProfanityFilter.ProfanityFilter();
+            var result = filter.IsProfanity("shits");
+            Assert.That(result, Is.True);
         }
     }
 }
