@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace ProfanityPoc.ProfanityDetectorLib
 {
-    public class ProfanityDetectorTests
+    public class IsProfanityTests
     {
         [TestCase("hello")]
         [TestCase("Scunthorpe")]
