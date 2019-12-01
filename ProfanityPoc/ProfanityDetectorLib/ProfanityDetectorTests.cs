@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace ProfanityPoc
+namespace ProfanityPoc.ProfanityDetectorLib
 {
     public class ProfanityDetectorTests
     {
